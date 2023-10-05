@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animation.css">
+        <link rel="stylesheet" href="css/mediya.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
+        <title>Snake game</title>
+</head>
+<body>
+        <audio class="body_audio" src="mp3/primitive-snake-charmer-melody-104216.mp3" autoplay loop></audio>
+        <audio class="food_mp3_audio" src="mp3/snake food mp3.mp3"></audio>
+        <audio class="snake_game_over" src="mp3/game over.wav"></audio>
+        <section class="fon fon_theme_color">
+                <div class="acount_card ">
+                        <div class="card_acount_qu">
+                                <p><i class="fa-solid fa-xmark"></i></p>
+                                <p class="font_FaMiLi_12">Do you want to log out of your account?</p>
+                                <p>
+                                        <button class="btn_save_out ">exit</button>
+                                        <button class="btn_save log_acount_out_ok">ok</button>
+                                </p>
+                        </div>
+                </div>
+                <div class="acount_card_content fon_theme_color">
+                        <div class="img">
+                                <img src="https://win10faq.com/wp-content/uploads/2018/02/microsoft-img.png"  alt="">
+                        </div>
+                        <div class="name">
+                                <label for="" class="text_js">name :</label>
+                                <input type="text" class="user_name_input_taxrirlash  btn_input_color_js">
+                        </div>
+                        <div class="add_acount">
+                                <ul></ul>
+                                <div class="add_">
+                                        <span><i class="fa-solid fa-plus text_js"></i></span>
+                                        <span class="text_js">add</span>
+                                </div>
+                        </div>
+                        <div class="acount_bar_btn">
+                                <button class="btn_save_out log_out  btn_input_color_js" >log out</button>
+                                <button class="btn_save new_acont_save  btn_input_color_js">save</button>
+                        </div>
+                </div>
+                <div class="top_bar_acount">
+                        <div class="left">
+                                <div class="img img_acount_js">
+                                        <img src="https://win10faq.com/wp-content/uploads/2018/02/microsoft-img.png" alt="">
+                                </div>
+                                <div class="user-name">
+                                        <span class="snake_user_name_label font_FaMiLi_12"></span>
+                                </div>
+                        </div>
+                        <div class="right">
+                                <i class="fa-solid fa-expand"></i>
+                                <!-- <i class="fa-solid fa-minimize"></i> -->
+                        </div>
+                </div>
+               <div class="card1">
+                        <p class="snake_text">
+                                <span class="a_span_snake " style="--i:1">s</span>
+                                <span class="a_span_snake " style="--i:2">n</span>
+                                <span class="a_span_snake " style="--i:3">a</span>
+                                <span class="a_span_snake " style="--i:4">k</span>
+                                <span class="a_span_snake " style="--i:5">e</span>
+                                
+                        </p>
+                        <input type="text" class="input_snake_name  input_userx1 btn_input_color_js" placeholder="name">
+                        <button class="user_name_btn text_js btn_input_color_js">enter</button>
+
+                        <div class="icon_user_name"> </div>
+                
+               </div>
+               <div class="text_bart_bottom">
+                <ul>
+                        <li>
+                                <a href="#" class="animation_x1_setting"><i class="fa-solid fa-gear"></i></a>
+                        </li>
+                        <li>
+                                <a href="#" class="animation_x1_record">
+                                        <img src="img/icons8-trophy-100.png" alt="">
+                                </a>
+                        </li>
+                        <li>
+                                <a href="#" class="animation_x1_snake">
+                                        <img src="img/icons8-snake-90.png" alt="">
+                                </a>
+                        </li>
+                        <li >
+                                <a href="#" class="animation_x1_play"><i class="fa-solid fa-gamepad"></i></a>
+                        </li>
+                </ul>
+            </div>
+                <div class="animation fon_theme_color">
+                    <div class="text fon_theme_color">
+                        <ul class="x1">
+                                <li class="animation_x1_play">
+                                        <a href="#" class="btn_input_color_js">play</a>
+                                </li>
+                                <li  class="animation_x1_snake">
+                                        <a href="#" class="btn_input_color_js">snake</a>
+                                </li>
+                                <li  class="animation_x1_record">
+                                        <a href="#" class="btn_input_color_js">record</a>
+                                </li>
+                                <li  class="animation_x1_setting">
+                                        <a href="#" class="btn_input_color_js">setting</a>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="animation1 fon_theme_color">
+                    <div class="text fon_theme_color"></div>
+                </div>
+                <div class="animation2 fon_theme_color">
+                    <div class="text fon_theme_color"></div>
+                </div>
+                <div class="animation3 fon_theme_color">
+                    <div class="text fon_theme_color"></div>
+                </div>
+                <div class="animation4 fon_theme_color">
+                    <div class="text fon_theme_color"></div>
+                </div>
+
+                <!-- play -->
+                <div class="play ">
+                        <div class="play_content fon_theme_color" style="position:relative;">
+                        <div class="play_animation "> 
+                                <div style="--i:1; --color:yellow"></div>
+                                <div style="--i:2; --color:rgb(21, 255, 0)"></div>
+                                <div style="--i:3; --color:rgb(21, 255, 0)"></div>
+                                <div style="--i:4; --color:rgb(76, 0, 255)"></div>
+                                <div style="--i:5; --color:rgb(255, 0, 234)"></div>
+                                <div style="--i:6; --color:rgb(255, 0, 0)"></div>
+                                <div style="--i:7; --color:rgb(21, 255, 0)"></div>
+                                <div style="--i:8; --color:rgb(255, 0, 234)"></div>
+                                <div style="--i:9; --color:rgb(255, 196, 0)"></div>
+                                <div style="--i:10; --color:rgb(25, 0, 255)"></div>
+                                <div style="--i:11; --color:rgb(65, 169, 255)"></div>
+                                <div style="--i:12; --color:rgb(255, 255, 255)"></div>
+                                <div style="--i:11; --color:rgb(65, 169, 255)"></div>
+                                <div style="--i:10; --color:rgb(25, 0, 255)"></div>
+                                <div style="--i:9 ;--color:rgb(255, 196, 0)"></div>
+                                <div style="--i:8; --color:rgb(255, 0, 234)"></div>
+                                <div style="--i:7; --color:rgb(21, 255, 0)"></div>
+                                <div style="--i:6; --color:rgb(255, 0, 0)"></div>
+                                <div style="--i:5; --color:rgb(255, 0, 234)"></div>
+                                <div style="--i:4; --color:rgb(76, 0, 255)"></div>
+                                <div style="--i:3; --color:rgb(21, 255, 0)"></div>
+                                <div style="--i:2; --color:rgb(21, 255, 0)"></div>
+                                <div style="--i:1; --color: yellow"></div>
+                        </div>
+                                <p>
+                                        <span class="text_js">Snake game play</span>
+                                        <span class="exit text_js"><i class="fa-solid fa-xmark"></i></span>
+                                </p>
+                                <ul>
+                                        <li> 
+                                                <div class="img lave_1">
+                                                        <div class="snake"></div>
+                                                </div>
+                                                <div class="text">
+                                                        <p class="text_js">level 1</p>
+                                                        <p>
+                                                                <span class="text_js">record</span>
+                                                                <span class="lave_1_record text_js">0</span>
+                                                        </p>
+                                                </div>
+                                                <button class="active btn_input_color_js">
+                                                        <a href="#" class="lavel_1_window ">play</a>
+                                                </button>
+                                        </li>
+                                        <li> 
+                                                <div class="img lave_2">
+                                                        <div class="snake"></div>
+                                                        <div class="blok_window">
+                                                                <span>
+                                                                        <font class="">20</font> <i class="fa-regular fa-star"></i>
+                                                                </span>
+                                                        </div>
+                                                </div>
+                                                <div class="text">
+                                                        <p class="text_js">level 2</p>
+                                                        <p>
+                                                                <span class="text_js">record</span>
+                                                                <span class="text_js">00</span>
+                                                        </p>
+                                                </div>
+                                                <button class="btn_lavel_2 btn_input_color_js">
+                                                        <a href="#" class="">play</a>
+                                                </button>
+                                        </li>
+                                        <li> 
+                                                <div class="img lave_3">
+                                                        <div class="snake"></div>
+                                                        <div class="blok1"></div>
+                                                        <div class="blok2"></div>
+                                                        <div class="blok_window ">
+                                                                <span>
+                                                                        <font class="">75</font>  <i class="fa-regular fa-star"></i>
+                                                                </span>
+                                                        </div>
+                                                </div>
+                                                <div class="text">
+                                                        <p class="text_js"> level 3</p>
+                                                        <p>
+                                                                <span class="text_js">record</span>
+                                                                <span class="text_js">00</span>
+                                                        </p>
+                                                </div>
+                                                <button class="btn_input_color_js">
+                                                        <a href="#" class="">play</a>
+                                                </button>
+                                                
+                                        </li>
+                                        <li> 
+                                                <div class="img lave_4">
+                                                        <div class="snake"></div>
+                                                        <div class="blok1"></div>
+                                                        <div class="blok2"></div>
+                                                        <div class="blok3"></div>
+                                                        <div class="blok4"></div>
+                                                        <div class="blok_window">
+                                                                <span>
+                                                                        <font class="">100</font>  <i class="fa-regular fa-star"></i>
+                                                                </span>
+                                                        </div>
+                                                </div>
+                                                <div class="text">
+                                                        <p class="text_js"> level 4</p>
+                                                        <p>
+                                                                <span class="text_js">record</span>
+                                                                <span class="text_js">00</span>
+                                                        </p>
+                                                </div>
+                                                <button class="btn_input_color_js">
+                                                        <a href="#" class="">play</a>
+                                                </button>
+                                        </li>
+                                </ul>
+                        </div>
+                </div>
+
+                <!-- record bar -->
+                <div class="record">
+                        <div class="record_content fon_theme_color">
+                                <p>
+                                        <span class="text_js">Snake game record</span>
+                                        <span class="exit text_js"><i class="fa-solid fa-xmark"></i></span>
+                                </p>
+                                <ul>
+                                        <li>
+                                                <span class="text_js">N</span>
+                                                <span class="text_js">Name</span>
+                                                <span class="text_js">food</span>
+                                                <span class="text_js">time</span>
+                                        </li>
+                                        <li>
+                                                <span class="record_icon"><i class="fa-solid fa-trophy "></i></span>
+                                                <span class="record_name text_js">Boburjon</span>
+                                                <span class="food text_js">45</span>
+                                                <span class="time text_js">30s</span>
+                                        </li>
+                                </ul>
+                        </div>
+                </div>
+
+                <!-- snake bar -->
+
+                <div class="snake_bar">
+                        <div class="snake_bar_content fon_theme_color">
+                                <p>
+                                        <span class="text_js">Snake setting</span>
+                                        <span class="exit text_js" ><i class="fa-solid fa-xmark"></i></span>
+                                </p>
+
+                                <div class="tabContentItem S_B_S_P">
+                                        <div class="tab_item btn_input_color_js"><i class="fa-solid fa-shapes text_js"></i></div>
+                                        <div class="tab_item btn_input_color_js"><i class="fa-sharp fa-solid fa-palette text_js"></i></div>
+                                        <div class="tab_item btn_input_color_js "><i class="fa-solid fa-gauge text_js"></i></div>
+                                        <div class="tab_item btn_input_color_js"><i class="fa-solid fa-egg text_js"></i></div>
+                                </div>
+
+                                <div class="tab_content">
+                                        <p class="text_js">snake figure</p>
+                                        <div class="snake_figura_tab">
+                                                <div class="left">
+                                                        <ul class="snake_bar_figure">
+                                                                <li class="snake_figura rectangle active">
+                                                                        <div></div>
+                                                                </li>
+                                                                <li class="snake_figura circle">
+                                                                        <div></div>
+                                                                </li>
+                                                                <li class="snake_figura triangle">
+                                                                        <div></div>
+                                                                </li>  
+                                                        </ul>
+                                                </div>
+                                                <div class="right">
+                                                        <p class="right_text text_js">active figure</p>
+                                                        <div class="active_figure">
+                                                                <div class="active_figura11 r active"></div>
+                                                                <div class="active_figura12 c "></div>
+                                                                <div class="active_figura13 t"></div>
+                                                        </div>
+                                                </div>
+                                                <button class="btn_save snake_btn_figura btn_input_color_js">save</button>
+                                        </div>
+                                </div>
+                                <div class="tab_content ">
+                                        <p class="text_js">snake colors</p>
+                                        <div class="snake_figura_tab">
+                                                <div class="left">
+                                                        <ul class="tab_color">
+                                                                <li class="color_active" style="--color:#CC0000;"></li>
+                                                                <li class="color_active" style="--color:#FF9933;"></li>
+                                                                <li class="color_active" style="--color:#FFFF33;"></li>
+                                                                <li class="color_active" style="--color:#00FF00;"></li>
+                                                                <li class="color_active" style="--color:#33FF99;"></li>
+                                                                <li class="color_active active" style="--color:#00FFFF;"></li>
+                                                                <li class="color_active "style="--color:#3333FF;"></li>
+                                                                <li class="color_active" style="--color:#FF33FF;"></li>
+                                                                <li class="color_active" style="--color:#FF3399;"></li>
+                                                                <li class="color_active" style="--color:#FFFFFF;"></li>
+                                                                <li class="color_active" style="--color:#0000CC;"></li>
+                                                                <li class="color_active" style="--color:#4C0099;"></li>
+                                                        </ul>
+                                                </div>
+                                                <div class="right">
+                                                        <p class="right_text text_js">active color</p>
+                                                        <div class="active_figure">
+                                                                <div class="active_color_snake r active"></div>
+                                                        </div>
+                                                </div>
+                                                <button class="btn_save color_btn btn_input_color_js">save</button>
+                                        </div>
+                                </div>
+                                <div class="tab_content ">
+                                        <p class="text_js">snake speed</p>
+                                        <div class="speed_input">
+                                                <button class="btn_speed animation_bar_snake btn_input_color_js">slow</button>
+                                                <button class="btn_speed animation_bar_snake active btn_input_color_js">medium</button>
+                                                <button class="btn_speed animation_bar_snake btn_input_color_js">fast</button>
+                                        </div>
+                                        <div class="speed_wiindow">
+                                                <div class="animation_speed"></div>
+                                        </div>
+                                </div>
+                                <div class="tab_content ">
+                                        <p class="text_js">snake food</p>
+                                        <ul class="food_figure">
+                                                <p class="text_js">food figure </p>
+                                                <li class="snake_figura12">
+                                                        <div class="t"></div>
+                                                </li>
+                                                <li class="snake_figura12">
+                                                        <div class="a"></div>
+                                                </li>
+                                                <li class="snake_figura12">
+                                                        <div class="u"></div>
+                                                </li>
+                                                <li class="snake_figura12 active">
+                                                        <i class="fa-solid fa-apple-whole fa-beat" style="color: #f5c211;"></i>
+                                                </li>
+                                                <li class="snake_figura12">
+                                                        <i class="fa-solid fa-egg fa-shake" style="color: #e66100;"></i>
+                                                </li>
+
+                                                
+                                        </ul>
+                                        <ul class="food_colors">
+                                                <p class="text_js">food color</p>
+                                                <li class="food_color" style="--color:#CC0000"></li>
+                                                <li class="food_color" style="--color:#FF9933"></li>
+                                                <li class="food_color" style="--color:#FFFF33"></li>
+                                                <li class="food_color" style="--color:#00FF00"></li>
+                                                <li class="food_color" style="--color:#33FF99"></li>
+                                                <li class="food_color" style="--color:#00FFFF"></li>
+                                                <li class="food_color" style="--color:#3333FF"></li>
+                                                <li class="food_color" style="--color:#FF33FF"></li>
+                                                <li class="food_color" style="--color:#FF3399"></li>
+                                                <li class="food_color active" style="--color:#FFFFFF"></li>
+                                                <li class="food_color" style="--color:#0000CC"></li>
+                                                <li class="food_color" style="--color:#4C0099"></li>
+                                        </ul>
+
+
+                                </div>
+                        </div>
+                </div>
+
+                <!-- snake setting -->
+
+                <div class="setting">
+                        <div class="setting_content fon_theme_color">
+                                <p>
+                                        <span class="text_js">setting</span>
+                                        <span>
+                                                <i class="fa-solid fa-volume-high audio_true text_js"></i>
+                                                <i class="fa-solid fa-volume-xmark audio_false text_js" style="display: none;"></i>
+                                                <i class="exit fa-solid fa-xmark xqw text_js"></i>
+                                        </span>
+
+                                </p>
+                                <div class="setting_bar">
+                                        <div class="setting_tab_items">
+                                                <ul  class="S_B_S_P">
+                                                        <li class="tab_item active btn_input_color_js">
+                                                                <span><a href="#"><i class="fa-solid fa-music"></i></a></i></span>
+                                                                <span class="x_bms">music</span>
+                                                        </li>
+                                                        <li class="tab_item btn_input_color_js">
+                                                                <span><a href="#"><i class="fa-solid fa-palette"></i></a></span>
+                                                                <span class="x_bms">theme</span>
+                                                        </li>
+                                                        <li class="tab_item btn_input_color_js">
+                                                                <span><a href="#"><i class="fa-solid fa-address-card"></i></a></i></span>
+                                                                <span class="x_bms">about</span>
+                                                        </li>
+                                                </ul>
+                                        </div>
+                                        <div class="setting_tab_window  tab_content active">
+                                                <div class="body_mp3">
+                                                        <p class="text_js">snake audio</p>
+                                                        <ul class="setting_mp3_audio">
+                                                                <li class=" active SNAKE_BODY_MP3" id="mp3_1">
+                                                                        <span>
+                                                                                <audio class="audio_snake" src="mp3/snake body mp3.mp4"></audio>
+                                                                                 snake 
+                                                                        </span>
+                                                                        <span class="fa-palay_snake_icon"><i class="fa-solid fa-play"></i></span>
+                                                                </li >
+                                                                <li class="SNAKE_BODY_MP3" id="mp3_2">
+                                                                        <span>
+                                                                                <audio class="audio_snake" src="mp3/panflute_j008b-77898.mp3"></audio>
+                                                                                 snake 
+                                                                        </span>
+                                                                        <span class="fa-palay_snake_icon"><i class="fa-solid fa-play"></i></span>
+                                                                </li>
+                                                                <li class="SNAKE_BODY_MP3"  id="mp3_3">
+                                                                        <span>
+                                                                                <audio class="audio_snake" src="mp3/primitive-snake-charmer-melody-104216.mp3"></audio>
+                                                                                 snake 
+                                                                        </span>
+                                                                        <span class="fa-palay_snake_icon"><i class="fa-solid fa-play"></i></span>
+                                                                </li>
+                                                                <li class="SNAKE_BODY_MP3" id="mp3_4">
+                                                                        <span>
+                                                                                <audio class="audio_snake" src="mp3/snake-scape-16631.mp3"></audio>
+                                                                                 snake 
+                                                                        </span>
+                                                                        <span class="fa-palay_snake_icon"><i class="fa-solid fa-play"></i></span>
+                                                                </li>
+
+                                                        </ul>
+                                                </div>
+                                                <div class="food_mp3">
+                                                        <p style="margin-top: 35px;" class="text_js">food audio</p>
+                                                        <ul class="setting_mp3_audio">
+                                                                <li class="active SNAKE_BODY_MP3"  id="mp3_5">
+                                                                        <span>
+                                                                                <audio class="audio_snake" src="mp3/snake food mp3.mp3"></audio>
+                                                                                snake food
+                                                                        </span>
+                                                                        <span class="fa-palay_snake_icon"><i class="fa-solid fa-play"></i></span>
+                                                                </li>
+                                                                
+                                                        </ul>
+                                                </div>
+                                                <button class="btn_save btn_save_mp3_body btn_input_color_js">save</button>
+                                        </div>
+                                        <div class="setting_tab_window tab_content">
+                                                <p class="text_js">Theme</p>
+                                                <ul class="theme">
+                                                        <li class="theme_item">
+                                                                <span>
+                                                                        <label for="" class="text_js">white</label>
+                                                                </span>
+                                                                <span style="--i:#fff"></span>
+                                                        </li>
+                                                        <li class="theme_item">
+                                                                <span>
+                                                                        <label for="" class="text_js">dark</label>
+                                                                </span>
+                                                                <span style="--i:#000"></span>
+                                                        </li>
+                                                        <li class="active theme_item">
+                                                                <span>
+                                                                        <label for="" class="text_js">default</label>
+                                                                </span>
+                                                                <span style="--i:#0E1125"></span>
+                                                        </li>
+                                                </ul>
+                                                <button class="btn_save theme_save btn_input_color_js">save</button>
+                                        </div>
+                                        <div class="setting_tab_window tab_content">
+                                                <p class="text_js">About</p>
+                                                <ul class="about">
+                                                        <li class="text_js">
+                                                                This website was written in html css js programming languages by Buburjon. What can it do? here snake game is played, every user can enter a small account and with this account the snake will be played, you can change the color of the image of the food, you can change the theme and language.
+                                                        </li>
+                                                </ul>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+
+
+                <!-- lavel1 -->
+
+                <div class="lavel_1 hide fon_theme_color">
+                        <div class="top_bar_lavel">
+                                <div class="name_user_lavel">
+                                        <div class="img img_acount_js">
+                                                <img src="https://win10faq.com/wp-content/uploads/2018/02/microsoft-img.png" alt="">
+                                        </div>
+                                        <div class="user-name">
+                                                <span class="snake_user_name_label_lavel"></span>
+                                        </div>
+                                </div>
+                                <div class="div_rigiht_top">
+                                        <div class="food_soni">
+                                                <span class="food_number">0</span>
+                                        </div>
+                                        <div class="oldingi_food_soni">
+                                                <span class="food_number2">0</span>
+                                        </div>
+                                        <div class="food_second">
+                                                <span>0</span>
+                                        </div>
+                                        <div class="setting_lavel">
+                                                <button class="btn_save menyu_bar">menyu</button>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="game_over hide">
+                        <div class="game_over_content">
+                                <div class="animation_bar">
+                                        <div class="anim">
+                                                <span class="loader"></span>
+                                        </div>
+                                        <div class="text">
+                                                <span style="--i:1">g</span>
+                                                <span style="--i:2">a</span>
+                                                <span style="--i:3">m</span>
+                                                <span style="--i:4">e</span>
+                                                <span style="--i:5">&nbsp; </span>
+                                                <span style="--i:6">o</span>
+                                                <span style="--i:7">v</span>
+                                                <span style="--i:8">e</span>
+                                                <span style="--i:9">r</span>
+                                        </div>
+                                </div>
+                                <div class="btn_save_buuton">
+                                        <button class="btn_out_game_our btn_refresh_buuton"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                        <button class="btn_out_game_our btn_house_buuton"><i class="fa-solid fa-house"></i></button>
+                                </div>
+                        </div>
+                        </div>
+        
+                        <div class="game_bar">
+                                <div class="play_bar"></div>
+                        </div>
+                        <div class="mobile_bottom">
+                                <button class="tup"><i class="fas fa-up"></i></button>
+                                <button class="right"><i class="fas fa-right"></i></button>
+                                <button class="down"><i class="fas fa-down"></i></button>
+                                <button class="left"><i class="fas fa-left"></i></button>
+                        </div>
+                </div>  
+
+                
+            </section>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="script/script.js"></script>
+</body>
+</html>
